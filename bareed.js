@@ -68,6 +68,12 @@ let wallet = new Wallet(20);
  **********************************************************/
 class Person {
   // implement Person!
+  constructor(name, x, y, wallet = 0) {
+    this.name = name;
+    this.location = new Point(x, y);
+    this.wallet = new Wallet(wallet);
+  }
+  moveTo = (point) => (this.location = point);
 }
 
 /**********************************************************
